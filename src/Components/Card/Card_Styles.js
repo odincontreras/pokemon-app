@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {rotate} from '../Navbar/Navbar_Styles'
+import { rotate } from "../Navbar/Navbar_Styles";
 
 export const CardContainer = styled.div`
 	width: ${(props) => (props.detailed ? "400px" : "280px")};
@@ -32,7 +32,6 @@ export const PokemonImg = styled.img`
 	width: ${(props) => (props.detailed ? "400px" : "280px")};
 	height: ${(props) => (props.detailed ? "400px" : "280px")};
 	transition: transform 1s;
-	
 
 	&:hover {
 		transform: scale(1.25);
@@ -50,6 +49,7 @@ export const InformationContainer = styled.div`
 	border-radius: 0px 0px 20px 20px;
 	font-size: 1.1rem;
 	font-family: "Flexo";
+
 `;
 
 export const PokemonName = styled.h5`
