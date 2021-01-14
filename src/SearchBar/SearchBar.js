@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { TitleBar, Form, InputBar, SendIcon, SearchBarContainer, SendButton } from "./SearchBar_Styles";
+import { TitleBar, Form, InputBar, SearchBarContainer, SendButton } from "./SearchBar_Styles";
 import { NavLink, Route, useHistory } from "react-router-dom";
 import DetailedPokemon from "../Components/DetailedPokemon/DetailedPokemon";
 
@@ -14,7 +14,7 @@ function SearchBar() {
 	};
 
 	const handleClick = () => {
-		setPokemon(value);
+		setPokemon(value.toLowerCase().replace(/[^a-zA-Z ]/g, ""));
 		setValue("");
 	};
 

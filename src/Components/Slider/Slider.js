@@ -6,10 +6,10 @@ import PikachuImg from "./Pokemons-Imgs/Pikachu.png";
 import SquirtleImg from "./Pokemons-Imgs/Squirtle.png";
 import CharmanderImg from "./Pokemons-Imgs/Charmander.png";
 import BulbasaurImg from "./Pokemons-Imgs/Bulbasaur.png";
-import beach from "../../Backgrounds-Slider/beach-4.jpg";
-import forest from "../../Backgrounds-Slider/forest-5.jpg";
-import volcano from "../../Backgrounds-Slider/volcano-1.jpg";
-import storm from "../../Backgrounds-Slider/storm-2.jpg";
+import beach from "./Backgrounds-Slider/beach-4.jpg";
+import forest from "./Backgrounds-Slider/forest-5.jpg";
+import volcano from "./Backgrounds-Slider/volcano-1.jpg";
+import storm from "./Backgrounds-Slider/storm-2.jpg";
 
 function Slider() {
 	const background = {
