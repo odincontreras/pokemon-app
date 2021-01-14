@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { TitleBar, Form, InputBar, SearchBarContainer, SendButton } from "./SearchBar_Styles";
 import { NavLink, Route, useHistory } from "react-router-dom";
-import DetailedPokemon from "../Components/DetailedPokemon/DetailedPokemon";
+import DetailedPokemon from "../DetailedPokemon/DetailedPokemon";
 
 function SearchBar() {
 	const [value, setValue] = useState("");

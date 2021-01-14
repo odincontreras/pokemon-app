@@ -3,6 +3,10 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./Components/App/App";
 import reportWebVitals from "./reportWebVitals";
+import './Fonts/Flexo-Medium.woff';
+import "./Fonts/Flexo-Medium.woff2";
+import "./Fonts/Flexo-Regular.woff";
+import "./Fonts/Flexo-Regular.woff2";
 
 ReactDOM.render(<App />, document.getElementById("root"));
 

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {AppContainer, TopButton, ArrowUp} from './App_Styles';
-import SearchBar from "../../SearchBar/SearchBar";
+import SearchBar from "../SearchBar/SearchBar";
 import Navbar from "../Navbar/Navbar";
 import Slider from "../Slider/Slider";
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
