@@ -18,7 +18,6 @@ function Navbar() {
 						<PokeballContainer>
 							<Pokeball src={PokeballImg} alt="PokeballImg" />
 						</PokeballContainer>
-
 						<Title>Pokemon Seeker</Title>
 					</LogoContainer>
 				</NavLink>

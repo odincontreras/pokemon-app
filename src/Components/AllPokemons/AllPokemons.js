@@ -37,7 +37,7 @@ function AllPokemons({initVal, limit, emptyObj}) {
 		};
 
 		pokemonObj.map((item) => {
-			axios
+			return axios
 				.get(item.api)
 				.then((res) => {
 					updateValueInObj(res, pokemonObj.indexOf(item));
@@ -59,6 +59,7 @@ function AllPokemons({initVal, limit, emptyObj}) {
 			getPokemon();
 			setToggle(false);
 		}
+		// eslint-disable-next-line
 	}, [created, fetchData]);
 
 	//Set the object to empty 

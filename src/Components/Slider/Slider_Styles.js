@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-
-
 export const SliderContainer = styled.div`
 	height: 300px;
 	background-color: #20232a;

@@ -18,64 +18,46 @@ function Card({ loading, pokemon, detailed, pokemonSpecie, evolChain }) {
 	const backgroundColor = (pokemonType) => {
 		switch (pokemonType) {
 			case "water":
-				return "#1467d3";
-				break;
+				return "#1467d3";				
 			case "fire":
-				return "#af2121";
-				break;
+				return "#af2121";				
 			case "grass":
-				return "#028802";
-				break;
+				return "#028802";				
 			case "poison":
-				return "#800080";
-				break;
+				return "#800080";				
 			case "bug":
-				return "linear-gradient(45deg, rgba(22,176,16,1) 0%, rgba(236,192,12,1) 100%)";
-				break;
+				return "linear-gradient(45deg, rgba(22,176,16,1) 0%, rgba(236,192,12,1) 100%)";				
 			case "flying":
-				return "linear-gradient(45deg, rgba(110,110,110,1) 22%, rgba(0,5,247,1) 100%)";
-				break;
+				return "linear-gradient(45deg, rgba(110,110,110,1) 22%, rgba(0,5,247,1) 100%)";				
 			case "ground":
-				return "#923f26";
-				break;
+				return "#923f26";				
 			case "electric":
-				return "linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 33%, rgba(255,186,11,1) 100%)";
-				break;
+				return "linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 33%, rgba(255,186,11,1) 100%)";				
 			case "fairy":
-				return "#ca7381";
-				break;
+				return "#ca7381";				
 			case "fighting":
-				return "linear-gradient(45deg, rgba(131,131,131,1) 0%, rgba(153,144,106,1) 19%, rgba(152,80,4,1) 100%)";
-				break;
+				return "linear-gradient(45deg, rgba(131,131,131,1) 0%, rgba(153,144,106,1) 19%, rgba(152,80,4,1) 100%)";				
 			case "psychic":
-				return "linear-gradient(45deg, rgba(111,111,111,1) 22%, rgba(255,73,251,1) 100%)";
-				break;
+				return "linear-gradient(45deg, rgba(111,111,111,1) 22%, rgba(255,73,251,1) 100%)";				
 			case "steel":
-				return "#949494";
-				break;
+				return "#949494";				
 			case "ice":
-				return "linear-gradient(45deg, rgba(84,84,84,1) 0%, rgba(0,172,247,1) 100%);";
-				break;
+				return "linear-gradient(45deg, rgba(84,84,84,1) 0%, rgba(0,172,247,1) 100%);";				
 			case "rock":
-				return "#012c01";
-				break;
+				return "#012c01";				
 			case "ghost":
-				return "linear-gradient(45deg, rgba(0,0,0,1) 22%, rgba(182,0,247,1) 100%)";
-				break;
+				return "linear-gradient(45deg, rgba(0,0,0,1) 22%, rgba(182,0,247,1) 100%)";				
 			case "dragon":
-				return "linear-gradient(45deg, rgba(255,106,0,1) 15%, rgba(7,113,1,1) 100%)";
-				break;
+				return "linear-gradient(45deg, rgba(255,106,0,1) 15%, rgba(7,113,1,1) 100%)";				
 			case "dark":
-				return "linear-gradient(45deg, rgba(0,0,0,1) 15%, rgba(102,102,102,1) 100%)";
-				break;
+				return "linear-gradient(45deg, rgba(0,0,0,1) 15%, rgba(102,102,102,1) 100%)";				
 			default:
-				return "#525252";
-				break;
+				return "#525252";				
 		}
 	};
 
 	return (
-		<CardContainer detailed={detailed} loading={loading}>
+		<CardContainer detailed={detailed} >
 			{loading ? (
 				<PokeballSpinner src={pokeballImg} />
 			) : (

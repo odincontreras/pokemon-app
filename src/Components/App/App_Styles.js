@@ -5,8 +5,6 @@ export const AppContainer = styled.div`
 	height: 100%;
 	width: 100%;
 	background-color: #20232a;
-
-	
 `;
 
 export const ArrowUp = styled(FaArrowUp)`
