@@ -12,8 +12,11 @@ export const ArrowUp = styled(FaArrowUp)`
 	font-size: 30px;
 	transition: all 1s ease-out;
 
-	@media only screen and (max-width: 450px) {
-		font-size: 25px;
+	@media only screen and (max-width: 860px) {
+		font-size: 27px;
+	}
+	@media only screen and (max-width: 368px) {
+		font-size: 24px;
 	}
 `;
 
@@ -29,8 +32,8 @@ export const TopButton = styled.button`
 					visibility: hidden;
 			  `};
 	position: fixed;
-	bottom: 30px;
-	right: 30px;
+	bottom: 110px;
+	right: 3%;
 	background-color: #323232;
 	width: 55px;
 	height: 55px;
@@ -48,12 +51,21 @@ export const TopButton = styled.button`
 		outline: none;
 	}
 
-	@media only screen and (max-width: 1500px) and (min-width: 1329px) {
-		bottom: 60px;
-		right: 60px;
-		width: 65px;
-		height: 65px;
+	@media only screen and (max-width: 860px) {
+		bottom: 105px;
+		width: 48px;
+		height: 48px;
 	}
+	@media only screen and (max-width: 368px) {
+		bottom: 98px;
+		width: 40px;
+		height: 40px;
+	}
+	/*
+	@media only screen and (max-width: 450px) {
+		right: 20px;
+	} 
+	/*
 	@media only screen and (max-width: 1328px) and (max-width: 1160px) {
 		bottom: 30px;
 		right: 30px;
@@ -95,5 +107,5 @@ export const TopButton = styled.button`
 	}
 	@media only screen and (max-width: 400px) {
 		display: none;
-	}
+	} */
 `;

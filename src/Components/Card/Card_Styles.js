@@ -4,15 +4,26 @@ import { rotate } from "../Navbar/Navbar_Styles";
 export const CardContainer = styled.div`
 	width: ${(props) => (props.detailed ? "400px" : "280px")};
 	background-color: rgb(82, 82, 82);
-	height: ${(props) => (props.detailed ? "auto" : "490px")};
+	height: ${(props) => (props.detailed ? "auto" : "560px")};
 	margin-bottom: 50px;
 	color: #fbfbfb;
 	border-radius: 20px;
 	overflow: hidden;
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: minmax(0, 100%);
+	grid-template-rows: ${(props) =>
+		props.detailed ? "auto" : "minmax(0, 50%) minmax(0, 50%)"};
 	margin-right: 30px;
 	margin-left: 30px;
+	@media only screen and (max-width: 510px) {
+		width: 250px;
+	}
+	@media only screen and (max-width: 399px) {
+		width: 225px;
+	}
+	@media only screen and (max-width: 345px) {
+		width: 200px;
+	}
 `;
 
 export const PokeballSpinner = styled.img`
@@ -23,14 +34,18 @@ export const PokeballSpinner = styled.img`
 `;
 
 export const ImgContainer = styled.div`
+	grid-column: 1 / 1;
+	grid-row: 1 / 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	overflow: hidden;
-	width: ${(props) => (props.detailed ? "400px" : "280px")};
-	height: ${(props) => (props.detailed ? "400px" : "280px")};
+	width: 100%;
+	height: 100%;
 `;
 
 export const PokemonImg = styled.img`
-	width: ${(props) => (props.detailed ? "400px" : "280px")};
-	height: ${(props) => (props.detailed ? "400px" : "280px")};
+	width: 90%;
 	transition: transform 1s;
 
 	&:hover {
@@ -39,57 +54,70 @@ export const PokemonImg = styled.img`
 `;
 
 export const InformationContainer = styled.div`
-	display: grid;
+	grid-column: 1 / 1;
+	grid-row: 2 / 2;
 	width: 100%;
-	grid-template: auto auto auto / 50% 50%;
-	justify-content: space-around;
+	height: 100%;
+	display: grid;
+	grid-template-rows: min-content;
+	grid-auto-rows: min-content;
+	grid-template-columns: 100%;
 	background-color: rgb(50, 50, 50);
-	height: ${(props) => (props.detailed ? "auto" : "210px")};
-	align-items: center;
 	border-radius: 0px 0px 20px 20px;
 	font-size: 1.1rem;
 	font-family: "Flexo";
-
+	padding-bottom: ${(props) => (props.detailed ? "10px" : "0")};
 `;
 
 export const PokemonName = styled.h5`
 	text-align: center;
 	background-color: rgb(50, 50, 50);
-	padding-top: 10px;
-	padding-bottom: 10px;
 	font-family: "Potta One";
-	grid-column: 1 / 3;
-	margin: 0;
+	grid-column: 1 / 1;
+	grid-row: 1 / 1;
+	align-self: center;
+	padding: 10px 0;
 `;
 
 export const InfName = styled.p`
 	grid-column: 1 / 1;
-	justify-items: space-around;
-	margin-left: 35px;
+	justify-self: center;
 `;
 
 export const InfContainer = styled.div`
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-	grid-column: 2 / 2;
+	grid-column: 1 / 1;
+	grid-row: ${({ gridRow }) => gridRow};
+	height: 100%;
+	width: 100%;
+	display: grid;
+	grid-template-columns: minmax(0, 50%) minmax(0, 50%);
+	margin-bottom: 10px;
 `;
 
-export const InfContent = styled.p`
-	grid-column: 2 / 2;
-	display: flex;
-	flex-wrap: wrap;
-	width: ${(props) => (props.detailed ? "150px" : "auto")};
-	margin-right: 10px;
-`;
+export const InfContent = styled.p``;
 
 export const TypeInf = styled.p`
-	grid-column: 2 / 2;
 	background: ${(props) => props.backgroundColor};
 	border-radius: 5px;
-	padding: 0px 10px;
-	margin-right: 10px;
-	:first-child {
-		margin-right: 15px;
-	}
+	height: 30px;
+	width: 65px;
+	text-align: center;
+`;
+
+export const TypeContainer = styled.div`
+	grid-column: 2 / 2;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding-right: 15px;
+`;
+
+export const TextContainer = styled.div`
+	grid-column: 2 / 2;
+	height: 100%;
+	width: 100%;
+	flex-direction: column;
+	justify-content: space-between;
 `;

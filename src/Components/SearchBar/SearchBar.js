@@ -14,7 +14,7 @@ function SearchBar() {
 	};
 
 	const handleClick = () => {
-		setPokemon(value.toLowerCase().replace(/[^a-zA-Z ]/g, ""));
+		setPokemon(value.toLowerCase().trim().replace(/[^a-zA-Z ]/g, ""));
 		setValue("");
 	};
 
