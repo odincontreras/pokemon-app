@@ -13,9 +13,7 @@ function DetailedPokemon({ pokemon }) {
 
 	useEffect(() => {
 		getDetailedPokemon();
-		/* console.log(generalData);
-		console.log(name)
-		console.log(pokemon) */
+		// eslint-disable-next-line
 	}, [loading, name, pokemon]);
 
 	useEffect(() => {

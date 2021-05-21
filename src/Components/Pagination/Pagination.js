@@ -17,13 +17,14 @@ function Pagination() {
 	const index = history.location.pathname;
 	let [initVal, setInitVal] = useState();
 	let [limit, setLimit] = useState();
-	const [paginationNumbs, setPaginationNumbs] = useState([]);
 	const [createdPaginationNumbs, setCreatedPaginationNumbs] = useState(false);
 	const [currentNumb, setCurrentNumb] = useState(1);
 	const [sliceNumbs, setSliceNumbs] = useState([]);
 	const [initSlice, setInitSlice] = useState(0);
 	const [endSlice, setEndSlice] = useState(10);
 	const [emptyObj, setEmptyObj] = useState(false);
+	// eslint-disable-next-line
+	const [paginationNumbs, setPaginationNumbs] = useState([]);
 
 	//Crea todos los numeros que renderizara el pagination
 	useEffect(() => {
@@ -33,21 +34,24 @@ function Pagination() {
 		}
 		setCreatedPaginationNumbs(true);
 		// console.log(paginationNumbs);
+		// eslint-disable-next-line
 	}, []);
 
 	//Corta en 10 en 10 los numeros que se van a renderizar en el pagination segun sea el indice
 	useEffect(() => {
 		setSliceNumbs(paginationNumbs.slice(initSlice, endSlice));
 		// console.log(sliceNumbs);
+		// eslint-disable-next-line
 	}, [initSlice, endSlice, createdPaginationNumbs]);
 
 	useEffect(() => {
 		handleIndexChange(index.slice(6, index.length));
 		// console.log(index.slice(6, index.length));
+		// eslint-disable-next-line
 	}, [index]);
 
 	const handlePrevIcon = () => {
-		if(currentNumb === 1 ) {
+		if (currentNumb === 1) {
 			return currentNumb;
 		} else {
 			return currentNumb - 1;
@@ -103,11 +107,11 @@ function Pagination() {
 
 	const handleBackgroundColor = (buttonNumb) => {
 		const currentNumb = parseFloat(index.slice(6, index.length));
-		
-		if(buttonNumb === currentNumb) {
+
+		if (buttonNumb === currentNumb) {
 			return true;
 		}
-	}
+	};
 
 	return (
 		<>
@@ -120,7 +124,7 @@ function Pagination() {
 
 			<NumbersBarContainer>
 				<Link to={`/home/${handlePrevIcon()}`}>
-					<PrevIcon/>
+					<PrevIcon />
 				</Link>
 				{sliceNumbs.map((item) => {
 					return (
@@ -130,7 +134,7 @@ function Pagination() {
 					);
 				})}
 				<Link to={`/home/${handleNextIcon()}`}>
-					<NextIcon/>
+					<NextIcon />
 				</Link>
 			</NumbersBarContainer>
 		</>
