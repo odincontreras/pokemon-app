@@ -20,9 +20,13 @@ export const CardContainer = styled.div`
 	}
 	@media only screen and (max-width: 399px) {
 		width: 225px;
+		grid-template-rows: ${(props) =>
+			props.detailed ? "auto" : "minmax(0, 45%) minmax(0, 55%)"};
+		height: ${(props) => (props.detailed ? "auto" : "520px")};
 	}
 	@media only screen and (max-width: 345px) {
 		width: 200px;
+		height: ${(props) => (props.detailed ? "auto" : "555px")};
 	}
 `;
 
